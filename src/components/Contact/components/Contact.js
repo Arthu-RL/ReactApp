@@ -8,7 +8,7 @@ function Contact() {
     const [show, setShow] = useState(false);
 
     return (
-        <>
+        <div>
             <div className="contact">
                 <button onClick={() => setShow(!show)}>
                     {show ? 'Unmount' : 'Mount'} the component
@@ -18,7 +18,7 @@ function Contact() {
             </div>
             <Clock />
             <WordsAdder />
-        </>
+        </div>
     );
 }
 

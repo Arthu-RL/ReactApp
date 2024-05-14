@@ -12,6 +12,7 @@ function Nav() {
                 <li><Link to="/About">About</Link></li>
                 <li><Link to="/Contact">Contact</Link></li>
                 <li><Link to="/Calculator">Simple Calculator</Link></li>
+                <li><Link to="/Lemon">Lemon</Link></li>
             </ul>
         </nav>
     );

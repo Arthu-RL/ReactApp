@@ -4,6 +4,7 @@ export const data = [
         title: "Tiramisu",
         description: "The best tiramisu in town",
         image: "https://picsum.photos/200/300?random",
+        calories: 400,
         price: "$5.00"
     },
     {
@@ -11,6 +12,7 @@ export const data = [
         title: "Lemon Mince Clowning Cream",
         description: "Mild ice cream taste",
         image: "https://picsum.photos/200/300?random",
+        calories: 300,
         price: "$4.50"
     },
     {
@@ -18,6 +20,7 @@ export const data = [
         title: "Chocolate Mousse Lover",
         description: "Unexpected flavours!",
         image: "https://picsum.photos/200/300?random",
+        calories: 500,
         price: "$6.00"
     },
     {
@@ -25,6 +28,7 @@ export const data = [
         title: "Candy Fish",
         description: "The best Candy Fish in town",
         image: "https://picsum.photos/200/300?random",
+        calories: 200,
         price: "$5.00"
     },
     {
@@ -32,6 +36,7 @@ export const data = [
         title: "Lemon Mince Chocolate Cream",
         description: "Mild ice Chocolate cream taste",
         image: "https://picsum.photos/200/300?random",
+        calories: 700,
         price: "$4.50"
     },
     {
@@ -39,6 +44,7 @@ export const data = [
         title: "Passion fruit Mousse Lover",
         description: "Unexpected flavours!",
         image: "https://picsum.photos/200/300?random",
+        calories: 100,
         price: "$6.00"
     }
 ];

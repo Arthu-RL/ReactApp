@@ -6,8 +6,14 @@ class Desserts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            desserts: data.map(element => {
-                return <li>{`${element.title} - ${element.description} - ${element.price}`}</li>;
+            desserts: data.filter((element) => {
+                return element.calories < 700;
+            })
+            .sort((a, b) => {
+                return a.calories - b.calories;
+            }) 
+            .map((element) => {
+                return <li>{`${element.title} - ${element.description} - ${element.calories}`}</li>;
             })
         };
     }

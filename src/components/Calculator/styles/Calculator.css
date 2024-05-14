@@ -1,0 +1,65 @@
+.calculator {
+    border: 2px solid rgb(255, 109, 109);
+}
+
+.calcInput {
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.calcBtns {
+    display: flex;
+    flex-direction: row;
+}
+
+.add, .subtract, .multiply, .divide, .resetInput, .resetResult {
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: whitesmoke;
+    margin-right: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.add:hover, .subtract:hover, .multiply:hover, .divide:hover, .resetInput:hover, .resetResult:hover {
+    filter: drop-shadow(0 0 2px blue);
+}
+
+.add {
+    height: 35px;
+    width: 60px;
+}
+
+.subtract {
+    height: 35px;
+    width: 90px;
+}
+
+.multiply {
+    height: 35px;
+    width: 90px;
+}
+
+.divide {
+    height: 35px;
+    width: 80px;
+}
+
+.resetInput {
+    height: 35px;
+    width: 120px;
+
+    background-color: tomato;
+}
+
+.resetResult {
+    height: 35px;
+    width: 130px;
+
+    background-color: tomato;
+}

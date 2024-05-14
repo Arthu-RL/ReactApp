@@ -7,14 +7,14 @@ function Form() {
     const [inputText, setText] = useState('WELCOME')
 
     const names = [
-        'Alisson',
+        'Tuco',
         'Roberto',
-        'Herbeson',
+        'Tico',
         'Samuel',
         'Arthur',
         'Alan',
         'Amanda',
-        'Patrícia',
+        'Teco',
         'Kailane',
         'Lucas'
     ];

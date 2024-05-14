@@ -8,6 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### or
 ### `npm create react-app folder`
 
+## Build and Run
+### `npm run start`
+### Or, Build Production
+### `npm install -g serve`
+### `npm run build`
+### `npx serve -s build -l 4000` 
+
 ## Available Scripts
 
 In the project directory, you can run:

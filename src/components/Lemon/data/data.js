@@ -19,5 +19,26 @@ export const data = [
         description: "Unexpected flavours!",
         image: "https://picsum.photos/200/300?random",
         price: "$6.00"
+    },
+    {
+        id: "4",
+        title: "Candy Fish",
+        description: "The best Candy Fish in town",
+        image: "https://picsum.photos/200/300?random",
+        price: "$5.00"
+    },
+    {
+        id: "5",
+        title: "Lemon Mince Chocolate Cream",
+        description: "Mild ice Chocolate cream taste",
+        image: "https://picsum.photos/200/300?random",
+        price: "$4.50"
+    },
+    {
+        id: "6",
+        title: "Passion fruit Mousse Lover",
+        description: "Unexpected flavours!",
+        image: "https://picsum.photos/200/300?random",
+        price: "$6.00"
     }
 ];

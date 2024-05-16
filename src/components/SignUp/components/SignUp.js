@@ -32,6 +32,9 @@ class SignUp extends React.Component {
             },
             errors: 4
         };
+        
+        // Using ref on class based components
+        // this.myRef = React.createRef();
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);

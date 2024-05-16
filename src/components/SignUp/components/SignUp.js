@@ -8,22 +8,27 @@ class SignUp extends React.Component {
             firstNameState: {
                 firstName: "",
                 firstNameError: "",
+                changed: 0
             },
             lastNameState: {
                 lastName: "",
                 lastError: "",
+                changed: 0
             },
             emailState: {
                 email: "",
                 emailError: "",
+                changed: 0
             },
             passwordState: {
                 password: "",
                 passwordError: "",
+                changed: 0
             },
             roleState: {
                 role: "role",
                 roleError: "",
+                changed: 0
             },
             errors: 4
         };
@@ -32,100 +37,109 @@ class SignUp extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    validateFirstName() {
-        const firstNameAlias = this.state.firstNameState.firstName;
-        if (!firstNameAlias || firstNameAlias.length < 1) {
+    validateFirstName(value) {
+        if (!value || value.length < 1) {
             this.setState((state) => ({
                 ...state,
                 firstNameState: {
                     ...state.firstNameState,
-                    firstNameError: "First name undefined..."
-                }
+                    firstNameError: "First name undefined...",
+                    changed: 0
+                },
+                errors: state.firstNameState.changed === 1 ? state.errors + 1 : state.errors
             }));
         }
         else {
-            if (firstNameAlias && firstNameAlias.length >= 1) {
+            if (value && value.length >= 1) {
                 this.setState((state) => ({
                     ...state,
                     firstNameState: {
                         ...state.firstNameState,
-                        firstNameError: ""
+                        firstNameError: "",
+                        changed: 1
                     },
-                    errors: state.errors - 1
+                    errors: state.firstNameState.changed === 0 ? state.errors - 1 : state.errors
                 }));
             }
         }
     }
     
-    validateEmail() {
-        const emailAlias = this.state.emailState.email;
-        if (!emailAlias || emailAlias.indexOf("@") === -1) {
+    validateEmail(value) {
+        if (!value || value.indexOf("@") === -1 || value.length < 8) {
             this.setState((state) => ({
                 ...state,
                 emailState: {
                     ...state.emailState,
-                    emailError: "Email not correct..."
-                }
+                    emailError: "Email not correct...",
+                    changed: 0
+                },
+                errors: state.emailState.changed === 1 ? state.errors + 1 : state.errors
             }));
         }
         else {
-            if (emailAlias && emailAlias.indexOf("@") !== -1) {
+            if (value && value.indexOf("@") !== -1 && value.length >= 8) {
                 this.setState((state) => ({
                     ...state,
                     emailState: {
                         ...state.emailState,
-                        emailError: ""
+                        emailError: "",
+                        changed: 1
                     },
-                    errors: state.errors - 1
+                    errors: state.emailState.changed === 0 ? state.errors - 1 : state.errors
                 }));
             }
         }
     }
 
-    validatePassword() {
-        const passwordAlias = this.state.passwordState.password
-        if (!passwordAlias || passwordAlias.length < 8) {
+    validatePassword(value) {
+        if (!value || value.length < 8) {
             this.setState((state) => ({
                 ...state,
                 passwordState: {
                     ...state.passwordState,
-                    passwordError: "Password is invalid..."
-                }
+                    passwordError: "Password is invalid...",
+                    changed: 0
+                },
+                errors: state.passwordState.changed === 1 ? state.errors + 1 : state.errors
             }));
         }
         else {
-            if (passwordAlias && passwordAlias.length >= 8) {
+            if (value && value.length >= 8) {
                 this.setState((state) => ({
                     ...state,
                     passwordState: {
                         ...state.passwordState,
-                        passwordError: ""
+                        passwordError: "",
+                        changed: 1
                     },
-                    errors: state.errors - 1
+                    errors: state.passwordState.changed === 0 ? state.errors - 1 : state.errors
                 }));
             }
         }
     }
 
-    validateRole() {
-        if (this.state.roleState.role === "role") {
+    validateRole(value) {
+        if (value === "role") {
             this.setState((state) => ({
                 ...state,
                 roleState: {
                     ...state.roleState,
-                    roleError: "Role is not set..."
-                }
+                    roleError: "Role is not set...",
+                    changed: 0
+                },
+                errors: state.roleState.changed === 1 ? state.errors + 1 : state.errors
             }));
         }
         else {
-            if (this.state.roleState.role !== "role") {
+            if (value !== "role") {
                 this.setState((state) => ({
                     ...state,
                     roleState: {
                         ...state.roleState,
-                        roleError: ""
+                        roleError: "",
+                        changed: 1
                     },
-                    errors: state.errors - 1
+                    errors: state.roleState.changed === 0 ? state.errors - 1 : state.errors
                 }));
             }
         }
@@ -135,30 +149,35 @@ class SignUp extends React.Component {
         this.setState(state => ({
             firstNameState: {
                 ...state.firstNameState,
-                firstName: ""
+                firstName: "",
+                changed: 0
             },
             lastNameState: {
                 ...state.lastNameState,
-                lastName: ""
+                lastName: "",
+                changed: 0
             },
             emailState: {
                 ...state.emailState,
                 email: "",
+                changed: 0
             },
             passwordState: {
                 ...state.passwordState,
                 password: "",
+                changed: 0
             },
             roleState: {
                 ...state.roleState,
                 role: "role",
+                changed: 0
             },
             errors: 4
         }));
     };
 
     handleChange(e) {
-        const { name, value } = e.target;
+        const { id, name, value } = e.target;
         const [ stateName, fieldName ] = name.split('.');
         this.setState(state => ({
             ...state,
@@ -167,11 +186,15 @@ class SignUp extends React.Component {
                 [fieldName]: value
             }
         }));
-
-        this.validateFirstName();
-        this.validateEmail();
-        this.validatePassword();
-        this.validateRole();
+        
+        if (id === "firstName")
+            this.validateFirstName(value);
+        else if (id === "email")
+            this.validateEmail(value);
+        else if (id === "password")
+            this.validatePassword(value);
+        else
+            this.validateRole(value);
     }
 
     handleSubmit(e) {

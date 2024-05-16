@@ -1,0 +1,66 @@
+.signSpace {
+    position: static;
+    border: 2px solid rgb(176, 176, 176);
+    border-radius: 3px;
+    height: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signupArea {
+    width: 300px;
+}
+
+.field1a {
+    margin: 0;
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: relative;
+}
+
+.firstName {
+    display: flex;
+    flex-direction: row;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+}
+
+.password {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.role {
+    display: flex;
+    flex-direction: row;
+}
+
+.signBtnDiv0a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.signBtn {
+    margin-top: 15px;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+    background-color: rgb(109, 109, 255);
+    border: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

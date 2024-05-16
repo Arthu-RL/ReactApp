@@ -19,19 +19,19 @@ class Desserts extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Mounting Desserts");
+        console.debug("Mounting Desserts");
     }
 
     componentWillUnmount(){
-        console.log("Unmounting Desserts");
+        console.debug("Unmounting Desserts");
     }
 
     componentDidUpdate() {
-        console.log("Desserts Updated");
+        console.debug("Desserts Updated");
     }
 
     componentDidCatch() {
-        console.log("Exception Desserts");
+        console.debug("Exception Desserts");
     }
 
     render() {

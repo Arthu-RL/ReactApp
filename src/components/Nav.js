@@ -13,6 +13,7 @@ function Nav() {
                 <li><Link to="/Contact">Contact</Link></li>
                 <li><Link to="/Calculator">Simple Calculator</Link></li>
                 <li><Link to="/Lemon">Lemon</Link></li>
+                <li><Link to="/SignUp">Sign Up</Link></li>
             </ul>
         </nav>
     );

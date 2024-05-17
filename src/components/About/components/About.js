@@ -28,7 +28,7 @@ function About(props) {
             <br /><br />
             {bob === "Arthur" ? "É o Arthur." : "Quem é esse?"}
             <Intro />
-            <ThemeContext.Provider value={"light"}>
+            <ThemeContext.Provider value={"dark"}>
                 <DisplayContext />
             </ThemeContext.Provider>
         </div>

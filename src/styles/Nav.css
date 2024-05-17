@@ -22,7 +22,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 1%;
+    height: 0.8vw;
     font-size: clamp(10px, 2vw, 17px);
     padding: 1.5rem;
     will-change: filter;

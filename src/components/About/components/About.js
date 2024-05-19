@@ -1,7 +1,7 @@
 import Intro from "./Intro";
 import React from "react";
-import ThemeContext from "./ContextTest";
-import DisplayContext from "./DisplayContext";
+import DisplayContext from "./ContextTest";
+import { ThemeProvider } from "./ContextProvider";
 
 function Heading({ title }) {
     // return React.createElement("div", null, React.createElement("h1", {}, title))
@@ -28,9 +28,9 @@ function About(props) {
             <br /><br />
             {bob === "Arthur" ? "É o Arthur." : "Quem é esse?"}
             <Intro />
-            <ThemeContext.Provider value={"dark"}>
+            <ThemeProvider>
                 <DisplayContext />
-            </ThemeContext.Provider>
+            </ThemeProvider>
         </div>
     );
 }

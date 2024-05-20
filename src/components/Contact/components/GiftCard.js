@@ -13,7 +13,13 @@ function GiftCard() {
 
     function spendGiftCard() {
         setGiftCard(
-            (prevState) => ({...prevState, valid: false})
+            (prevState) => (
+                {
+                    ...prevState, 
+                    text: "Your coupon has been used.",
+                    valid: false,
+                    instructions: "Please visit our restaurant to renew your gift card.",
+                })
         );
     }
 
@@ -40,7 +46,14 @@ function GiftCard() {
                     </div>
                 )
             }
-            {!giftCard.valid && (<h3>Gift Card was Spent!</h3>)}
+            {
+                !giftCard.valid && (
+                    <div style={{padding: '30px'}}>
+                        <h2>{giftCard.text}</h2>
+                        <h3>{giftCard.instructions}</h3>
+                    </div>
+                )
+            }
         </>
     );
 }

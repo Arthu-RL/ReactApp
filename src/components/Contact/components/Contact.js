@@ -4,6 +4,8 @@ import Text from "./Text";
 import Clock from "./Clock";
 import WordsAdder from "./ListWords"
 import Score from "./Score";
+import RenderGoals from "./GoalSetter";
+import GiftCard from "./GiftCard";
 
 function Contact() {
     const [show, setShow] = useState(false);
@@ -20,6 +22,8 @@ function Contact() {
             <Clock />
             <WordsAdder />
             <Score />
+            <RenderGoals />
+            <GiftCard />
         </div>
     );
 }

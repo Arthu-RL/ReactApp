@@ -2,11 +2,11 @@ import Intro from "./Intro";
 import React from "react";
 import DisplayContext from "./ContextTest";
 import { ThemeProvider } from "./ContextProvider";
+import FetchAsync from "./FetchAsync";
 
 function Heading({ title }) {
     // return React.createElement("div", null, React.createElement("h1", {}, title))
     const headingStyle = {
-        paddingTop: "50px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
@@ -31,6 +31,7 @@ function About(props) {
             <ThemeProvider>
                 <DisplayContext />
             </ThemeProvider>
+            <FetchAsync />
         </div>
     );
 }

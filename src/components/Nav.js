@@ -14,6 +14,7 @@ function Nav() {
                 <li><Link to="/Calculator">Simple Calculator</Link></li>
                 <li><Link to="/Lemon">Lemon</Link></li>
                 <li><Link to="/SignUp">Sign Up</Link></li>
+                <li><Link to="/Lab">Lab</Link></li>
             </ul>
         </nav>
     );

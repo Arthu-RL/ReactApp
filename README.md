@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Build and Run
 ### `npm run start`
 ### Or, Build Production
-### `npm install -g serve`
+### `npm install serve`
 ### `npm run build`
 ### `npx serve -s build -l 4000` 
 

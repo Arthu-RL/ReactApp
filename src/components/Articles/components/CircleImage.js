@@ -9,7 +9,6 @@ function CircleImage() {
             {/* <img height={300} src={imageUrl} alt="An image of a Manga Protagonist" /> */}
             <img height={500} width={700} src={circleImage} alt="An image of a Manga Protagonist" />
         </div>
-
     );
 }
 

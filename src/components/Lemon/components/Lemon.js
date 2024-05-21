@@ -1,6 +1,7 @@
 import "../styles/Lemon.css"
 import Desserts from "./Desserts";
 import Tasks from "./Tasks";
+import LemonGift from "./LemonGift";
 
 function Lemon() {
     return (
@@ -8,6 +9,7 @@ function Lemon() {
             <h1>List of low cal desserts</h1>
             <Desserts />
             <Tasks />
+            <LemonGift />
         </div>
     );
 }

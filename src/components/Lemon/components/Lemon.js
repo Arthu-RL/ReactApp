@@ -2,6 +2,7 @@ import "../styles/Lemon.css"
 import Desserts from "./Desserts";
 import Tasks from "./Tasks";
 import LemonGift from "./LemonGift";
+import GetNextDay from "./GetNextDay";
 
 function Lemon() {
     return (
@@ -10,6 +11,7 @@ function Lemon() {
             <Desserts />
             <Tasks />
             <LemonGift />
+            <GetNextDay />
         </div>
     );
 }

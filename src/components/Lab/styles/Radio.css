@@ -1,0 +1,43 @@
+.RadioGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.RadioOption {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.RadioInput {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.RadioLabel {
+    cursor: pointer;
+}
+
+.RadioCore {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.RadioCoreButton {
+    margin-top: 16px;
+    width: 150px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    background-color: darkblue;
+    color: white;
+}
+
+.RadioCoreButton:disabled,
+.RadioCoreButton[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+}

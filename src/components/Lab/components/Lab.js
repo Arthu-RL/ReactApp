@@ -2,6 +2,8 @@ import "../styles/Lab.css"
 import TextInputWithFocusButton from "./TextInputWithFocusButton"
 import CounterWithReducer from "./CounterReducer";
 import RestaurantDeeds from "./RestaurantDeeds";
+import CloneElements from "./CloneElements";
+import RadioCore from "./Radio";
 
 function Lab() {
     return (
@@ -9,6 +11,8 @@ function Lab() {
             <TextInputWithFocusButton />
             <CounterWithReducer />
             <RestaurantDeeds />
+            <CloneElements />
+            <RadioCore />
         </div>
     );
 }

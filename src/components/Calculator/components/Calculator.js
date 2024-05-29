@@ -30,6 +30,7 @@ function Calculator() {
     function resetInput(e) {
         e.preventDefault();
         inputRef.current.value = null;
+        inputRef.current.focus()
     };
 
     function resetResult(e) {

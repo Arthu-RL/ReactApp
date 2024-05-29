@@ -2,12 +2,15 @@ import React from "react";
 
 function FetchAsync() {
     const [btcData, setBtcData] = React.useState({}); 
+    console.log(btcData);
 
-    function fetchData() {
-        fetch(`https://api.coindesk.com/v1/bpi/currentprice.json`) 
-        .then((response) => response.json()) 
-        .then((jsonData) => setBtcData(jsonData.bpi.USD)) 
-        .catch((error) => console.log(error)); 
+    async function fetchData() {
+        try {
+            const dataJson = await (await fetch(`https://api.coindesk.com/v1/bpi/currentprice.json`)).json()
+            setBtcData(dataJson.bpi.USD)
+        } catch (err) {
+            console.error(err)
+        }
     }
 
     React.useEffect(() => { 

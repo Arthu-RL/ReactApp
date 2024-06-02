@@ -21,9 +21,7 @@
     position: static;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 0.8vw;
-    font-size: clamp(10px, 2vw, 17px);
+    font-size: calc(10px + 1vmin);
     padding: 1.5rem;
     will-change: filter;
     transition: 300ms;

@@ -14,7 +14,7 @@ function withMousePosition(WrappedComponent) {
                 y: e.clientY
             })
         }
-    
+
         React.useEffect(() => {
             window.addEventListener("mousemove", handleMousePositionChange);
 

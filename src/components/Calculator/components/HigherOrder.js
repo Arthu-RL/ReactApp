@@ -38,28 +38,19 @@ function MouseLogger({ mousePosition }) {
                 <td>
                     <span>x: {mousePosition.x}</span>
                 </td>
-            </tr>
-            <tr>
                 <td>
                     <span>y: {mousePosition.y}</span>
                 </td>
             </tr>
-
         </div>
     );
 }
 
-const PanelMouseTracker = withMousePosition(MouseLogger);
-
 function HigherOrder() {
-    const style = {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center"
-    }
+    const PanelMouseTracker = withMousePosition(MouseLogger);
 
     return (
-        <div style={style}>
+        <div className="HigherOrderDiv">
             <PanelMouseTracker />
         </div>
     );

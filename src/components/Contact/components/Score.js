@@ -1,21 +1,21 @@
 // Learning hooks, which are React functions that connect with the components lifecycle, and are or not affected
 // by it
-import { useState } from "react";
+import React from "react";
 import '../styles/Form.css'
 
-function Score() {
-    const [score, setScore] = useState("10")
-    const [comment, setComment] = useState("")
+function Score({ onSubmit }) {
+    const [score, setScore] = React.useState("10")
+    const [comment, setComment] = React.useState("")
+
+    const isDisabled = Number(score) <= 5 && comment.length <= 20;
+
+    const textAreaPlaceHolder = isDisabled ? 
+        "Share more information about your score please...thank you in advance!" : 
+        "Optional feedback";
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (Number(score) <= 5 && comment.length <= 20) {
-            alert("Share more information about your score please...thank you in advance!");
-            return;
-        }
-        
-        console.log("Score sent: ", score);
-
+        onSubmit({score, comment});
         setComment("");
         setScore("10");
     }
@@ -26,8 +26,9 @@ function Score() {
                 <fieldset>
                     <legend>FeedBack Form</legend>
                     <div className="field0a">
-                        <label>Score: {score}</label>
+                        <label htmlFor="scoreInput">Score: {score}</label>
                         <input 
+                            id="scoreInput"
                             type="range"
                             min={"0"}
                             max={"10"}
@@ -37,12 +38,16 @@ function Score() {
                     </div>
                     <div className="field0a">
                         <label>Comment:</label>
-                        <textarea value={comment} onChange={e => setComment(e.target.value)}/>
+                        <textarea 
+                            placeholder={textAreaPlaceHolder} 
+                            value={comment}
+                            onChange={e => setComment(e.target.value)} 
+                        />
                     </div>
                     <button 
                         type="submit"
                         className="btn"
-                        disabled={''}
+                        disabled={isDisabled}
                     >
                         Submit
                     </button>

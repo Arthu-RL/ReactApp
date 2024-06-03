@@ -33,15 +33,23 @@ function MouseLogger({ mousePosition }) {
 
     return (
         <div className="BasicTracker">
-            <th>Mouse position:</th>
-            <tr>
-                <td>
-                    <span>x: {mousePosition.x}</span>
-                </td>
-                <td>
-                    <span>y: {mousePosition.y}</span>
-                </td>
-            </tr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mouse position:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>x: {mousePosition.x}</span>
+                        </td>
+                        <td>
+                            <span>y: {mousePosition.y}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 }

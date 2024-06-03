@@ -3,7 +3,7 @@
 import React from "react";
 import '../styles/Form.css'
 
-function Score({ onSubmit }) {
+function Score({ onSubmit = ({ score, comment }) => { alert(`Thanks for the score: ${score}`) } }) {
     const [score, setScore] = React.useState("10")
     const [comment, setComment] = React.useState("")
 
